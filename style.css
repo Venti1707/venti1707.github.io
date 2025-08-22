@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: auto; /* Fit to content */
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  text-align: left;
+  white-space: nowrap; /* Prevent line breaks inside cells */
+}
+
+th {
+  background-color: #f2f2f2;
+}
