@@ -15,7 +15,7 @@ async function processClipboard() {
                 if (match) {
                     return {
                         percent: parseFloat(match[1]),
-                        block: match[3].trim(),
+                        blockName: match[3].trim(),
                         count: parseInt(match[2]),
                     };
                 }
@@ -28,7 +28,7 @@ async function processClipboard() {
                     return b.count - a.count;
                 }
                 // If counts are equal, sort by block name (A-Z)
-                return a.block.localeCompare(b.block);
+                return a.blockName.localeCompare(b.blockName);
             });
 
         const tbody = document.getElementById("tableBody");
@@ -38,7 +38,7 @@ async function processClipboard() {
         for (const entry of filtered) {
             const row = document.createElement("tr");
             row.innerHTML = `
-            <td>${entry.block}</td>
+            <td>${entry.blockName}</td>
             <td>${entry.count}</td>
             <td>${entry.percent.toFixed(3)}%</td>
           `;
