@@ -22,7 +22,14 @@ async function processClipboard() {
                 return null;
             })
             .filter(Boolean)
-            .sort((a, b) => b.count - a.count);
+            .sort((a, b) => {
+                // First, sort by count (highest to lowest)
+                if (b.count !== a.count) {
+                    return b.count - a.count;
+                }
+                // If counts are equal, sort by block name (A-Z)
+                return a.block.localeCompare(b.block);
+            });
 
         const tbody = document.getElementById("tableBody");
         const table = document.getElementById("resultTable");
