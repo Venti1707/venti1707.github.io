@@ -39,8 +39,8 @@ async function processClipboard() {
             const row = document.createElement("tr");
             row.innerHTML = `
             <td>${entry.block}</td>
-            <td>${entry.percent.toFixed(3)}%</td>
             <td>${entry.count}</td>
+            <td>${entry.percent.toFixed(3)}%</td>
           `;
             tbody.appendChild(row);
         }
