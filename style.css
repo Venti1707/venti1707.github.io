@@ -28,3 +28,21 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
+
+/* New Styles for Layout */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px; /* Add some space between iframe and content */
+}
+
+iframe {
+  width: 45%;
+  height: 600px;
+  border: none;
+}
+
+.content {
+  width: 45%;
+}
