@@ -15,8 +15,8 @@ async function processClipboard() {
                 if (match) {
                     return {
                         percent: parseFloat(match[1]),
-                        count: parseInt(match[2]),
                         block: match[3].trim(),
+                        count: parseInt(match[2]),
                     };
                 }
                 return null;
