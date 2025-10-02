@@ -3,22 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <title>Block Distribution Viewer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
     <script src="script.js"></script>
   </head>
   <body>
     <h1>Block Distribution Parser</h1>
-    <button onclick="processClipboard()">Paste & Process Clipboard</button>
-    <table id="resultTable" style="display: none">
-      <thead>
-        <tr>
-          <th>Block</th>
-          <th>Count</th>
-          <th>Percentage</th>
-        </tr>
-      </thead>
-      <tbody id="tableBody"></tbody>
-    </table>
+    <div class="container">
+      <!-- Content Section -->
+      <div class="content">
+        <button onclick="processClipboard()">Paste & Process Clipboard</button>
+        <table id="resultTable" style="display: none">
+          <thead>
+            <tr>
+              <th>Block Name</th>
+              <th>Count</th>
+              <th>Percentage</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
 
+      <!-- Google Spreadsheet iframe -->
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRknOSc1p5Z7rTOcLnauxUsPKOBH4QQrSFMS0Px3nsbdexdId72VO8YnhVbLolCezNkZbnzzB6tinah/pubhtml?gid=2020289645&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+    </div>
   </body>
 </html>
